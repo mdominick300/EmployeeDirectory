@@ -66,7 +66,6 @@ class Container extends React.Component {
     return (  
       <div>
         <Title />
-        
         <EmployeeList employees={employees} />
         </div>
       );
