@@ -2,36 +2,35 @@ import React from "react";
 import Employee from "../Employee";
 import "./style.css";
 
-
-
 // Whenever we try to render an array containing JSX, React knows to render each JSX element separately
 class EmployeeList extends React.Component {
-
   constructor(props) {
     super(props);
     this.sortName = this.sortName.bind(this)
     this.state = {
       search: '',
-      newSearch: ''
+      order: "chronological"
     }
   }
-
   
   sortName(event) {
-    const {search} = this.state
-    let newSearch = search
-    console.log("sort")
-    this.setState({
-      search: newSearch.sort((a, b) => a.name > b.name)
-    })
+    console.log(this.state.order);
+    if (this.state.order === 'chronological') {
+      this.setState({
+        order: 'reverseChronological'
+      });
+      this.props.employees.sort((a, b) => (a.name > b.name) ? 1 : -1)
+    } else {
+      this.setState({
+        order: "chronological"
+      });
+      this.props.employees.sort((a, b) => (a.name > b.name) ? -1 : 1)
+    }
   }
-
   updateSearch(event) {
     this.setState({ search: event.target.value.substr(0, 20) })
   }
-
   render() {
-
     let filterEmployee = this.props.employees.filter(
       (employee) => {
         return employee.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
@@ -43,12 +42,11 @@ class EmployeeList extends React.Component {
         <input type="text"
           value={this.state.search}
           onChange={this.updateSearch.bind(this)} /> Search by Employee
-
    <div className="col-md-12">
           <ul>
             <br></br>
             <div className="row">
-              <p className="col-md-2 font"><button onClick={this.sortName }>Order by Name</button>Name</p>
+              <p className="col-md-2 font"><button onClick={this.sortName}>Name</button></p>
               <p className="col-md-2 font">Phone Number</p>
               <p className="col-md-2 font">Email</p>
               <p className="col-md-2 font">Department</p>
@@ -60,10 +58,8 @@ class EmployeeList extends React.Component {
             })}
           </ul>
         </div>
-
       </div>
     );
   }
 }
-
 export default EmployeeList;
