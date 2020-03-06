@@ -8,7 +8,7 @@ const employees = [
       id: 1,
       name: "Howard Johnson",
       number: "555-443-9999",
-      department: "Accounting",
+      department: "Operations",
       start: "01/02/03",
       location: "Raleigh ,NC",
       email: "howard@gmail.com"
@@ -17,7 +17,7 @@ const employees = [
       id: 2,
       name:"Timmy Doogood",
       number: "444-333-1111",
-      department: "Accounting",
+      department: "Operations",
       start: "02/02/03",
       location: "Charlotte ,NC",
       email: "timmy@gmail.com"
@@ -35,7 +35,7 @@ const employees = [
       id: 4,
       name: "George Lucas",
       number: "888-888-9999",
-      department: "Accounting",
+      department: "Operations",
       start: "04/02/03",
       location: "Charlotte ,NC",
       email: "george@gmail.com"
