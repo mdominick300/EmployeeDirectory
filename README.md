@@ -18,16 +18,21 @@ User has the ability to search by the employee name to filter the results render
 
 
 # ScreenShots
+<p align="center">
 <img src="Screen Shot 2020-03-07 at 12.48.03 PM.png" width=400px>
+</p>
 
-
-Table Searched
+<p align="center">
+  Table Searched
+<br>
 <img src="Screen Shot 2020-03-07 at 12.48.12 PM.png" width=400px>
+</p>
 
-
+<p align="center">
 Table sorted by Name
+<br>
 <img src="Screen Shot 2020-03-07 at 12.48.31 PM.png" width=400px>
-Table sorted by Name
+</p>
 
 
 
