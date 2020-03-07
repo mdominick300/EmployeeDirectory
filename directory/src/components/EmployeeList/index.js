@@ -122,6 +122,7 @@ class EmployeeList extends React.Component {
           value={this.state.search}
           onChange={this.updateSearch.bind(this)} /> Search by Employee
    <div className="col-md-12">
+     
           <ul>
             <br></br>
             <div className="row">
@@ -129,7 +130,7 @@ class EmployeeList extends React.Component {
               <p className="col-md-2 font"><button onClick={this.sortNumber}>Phone Number</button></p>
               <p className="col-md-2 font"><button onClick={this.sortEmail}>Email</button></p>
               <p className="col-md-2 font"><button onClick={this.sortDepartment}>Department</button></p>
-              <p className="col-md-2 font"><button onClick={this.sortDepartment}>Start Date</button></p>
+              <p className="col-md-2 font"><button onClick={this.sortDate}>Start Date</button></p>
               <p className="col-md-2 font"><button onClick={this.sortLocation}>Location</button></p>
             </div>
             {filterEmployee.map((employee) => {

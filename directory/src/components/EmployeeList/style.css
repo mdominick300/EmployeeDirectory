@@ -11,3 +11,6 @@ button{
 	cursor: pointer;
 	outline: inherit;
 }
+table{
+	margin: 50px;
+}
