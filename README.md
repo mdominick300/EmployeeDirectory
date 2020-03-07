@@ -3,6 +3,9 @@
 Displays employee information in a table using React.
 
 User has the ability to search by the employee name to filter the results rendered to the page. Each column header will toggle sort by that specific column. 
+
+# Deployment Link
+https://stormy-dawn-69191.herokuapp.com/
  
  # Code
 -HTML
